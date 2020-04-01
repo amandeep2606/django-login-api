@@ -1,10 +1,11 @@
 from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
-from profiles_api.views import UserProfileViewset, UserLoginApiView
+from profiles_api.views import UserProfileViewset, UserLoginApiView, ProfileItemFeedViewset
 
 router = DefaultRouter()
 router.register('profile', UserProfileViewset)
+router.register('feed', ProfileItemFeedViewset)
 
 
 urlpatterns = [
